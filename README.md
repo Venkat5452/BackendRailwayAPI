@@ -48,12 +48,13 @@ A backend API built with Node.js and SQL Server for managing a railway reservati
     available_seats INT);
    ```
    ***Bookings Table***:
+   ```bash
    CREATE TABLE bookings (
     booking_id INT PRIMARY KEY IDENTITY(1,1),
     train_id INT,
     username NVARCHAR(50),
     FOREIGN KEY (train_id) REFERENCES trains(train_id));
-4. **Update the dbConfig in server.js with your database details**:
+5. **Update the dbConfig in server.js with your database details**:
    ```bash
    const dbConfig = {
     server: 'YOUR_SERVER_NAME',
@@ -64,7 +65,7 @@ A backend API built with Node.js and SQL Server for managing a railway reservati
         trustedConnection: true
    }};
    ```
-5. **Start The Server**:
+6. **Start The Server**:
    ```bash
    node server.js
 
