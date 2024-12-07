@@ -155,7 +155,55 @@ This endpoint allows users to check the availability of trains between specified
 ```json
 GET /trains/availability?source=Hyderabad&destination=Bangalore
 ```
+# Booking Management
 
+## Book a Seat
+
+This endpoint allows users to book a seat on a specific train.
+
+---
+
+### Endpoint Details
+
+**URL**: `/book`  
+**Method**: `POST`
+
+---
+
+### Headers
+
+```json
+{
+    "Authorization": "Bearer jwt_token"
+}
+```
+### Response
+```json
+{
+    "train_id": 1
+}
+```
+# Fetch Bookings
+
+## Fetch Bookings
+
+This endpoint allows users to retrieve their booking information.
+
+---
+
+### Endpoint Details
+
+**URL**: `/bookings`  
+**Method**: `GET`
+
+---
+
+### Headers
+
+```json
+{
+    "Authorization": "Bearer jwt_token"
+}
 
 
    
